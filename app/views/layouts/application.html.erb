@@ -26,6 +26,20 @@
       </div>
     </nav> 
 
+    <div class="apple_pagination">
+      <div class="page_info">
+        <%= page_entries_info @places %>
+      </div>
+      <%= will_paginate @places, :container => false %>
+    </div>
+    
     <%= yield %>
+
+        <div class="apple_pagination">
+      <div class="page_info">
+        <%= page_entries_info @places %>
+      </div>
+      <%= will_paginate @places, :container => false %>
+    </div>
   </body>
 </html>
