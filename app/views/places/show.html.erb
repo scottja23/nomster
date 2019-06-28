@@ -49,6 +49,13 @@
 <br />
 <br />
 
+     
+      
+  <%= simple_form_for @photo, url: '#' do |f| %>
+    <%= f.input :caption %>
+    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  <% end %>
+    
 
 <!-- Button trigger modal -->
 
@@ -63,6 +70,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
+
       <div class="modal-body">
         <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
         <%= f.input :message %>
