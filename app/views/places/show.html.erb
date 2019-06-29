@@ -4,6 +4,14 @@
   <br /><br />
   <p><%= @place.description %></p>
 
+  <% @place.pictures.each do |picture| %>
+    <div>
+      <blockquote>
+        <b><%= picture.capt %></b>
+      </blockquote>
+    </div>
+    <% end %>
+
 
 
   
@@ -53,7 +61,8 @@
 <%= simple_form_for @picture, url: place_pictures_path(@place) do |f| %>
   <%= f.input :capt %>
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
-<% end %>      
+<% end %>
+
 
     
 

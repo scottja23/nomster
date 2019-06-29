@@ -2,8 +2,8 @@ class CreatePictures < ActiveRecord::Migration[5.2]
   def change
     create_table :pictures do |t|
       t.text :capt
-      t.integer :place_id
       t.integer :user_id
+      t.integer :place_id
       t.timestamps
     end
 
